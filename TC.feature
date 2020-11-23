@@ -1,10 +1,10 @@
 @Component: Registration, Authorization, Cart
 Feature: TC
 
-    Scenario: 01 - Registration - 1 - Validate that USER is able to create account when all fields are populated with valid data
+    @Status:ToBeAutomated
+    @Priority:Medium
 
-        @Status:ToBeAutomated
-        @Priority:Medium
+    Scenario: 01 - Registration - 1 - Validate that USER is able to create account when all fields are populated with valid data
 
         Given user navigates by clicking https://litecart.stqa.ru/en/
         When user clicks 'Create new user' link
@@ -23,10 +23,8 @@ Feature: TC
         Then redirecting to the Home page with message " Your customer account has been created"
         And message is green
 
-    Scenario Outline: 02 - Registration - 2 Validate that USER is not able to create an account when all required fields (with "*") are populated with valid data except the field "Email" in which invalid data entered
 
-        @Status:ToBeAutomated
-        @Priority:Medium
+    Scenario Outline: 02 - Registration - 2 Validate that USER is not able to create an account when all required fields (with "*") are populated with valid data except the field "Email" in which invalid data entered
 
         Given user navigates by clicking https://litecart.stqa.ru/en/
         When user clicks 'Create new user' link
@@ -53,7 +51,7 @@ Feature: TC
             | test@test.com +space  |
             | test@@test.com        |
             | testtest.com          |
-            | teавпр@test.com   |
+            | teавпр@test.com       |
             | !#@test.com           |
             | test@                 |
             | @                     |
@@ -62,9 +60,6 @@ Feature: TC
 
     Scenario: 03 - Authorization - Validate that authorization is availiable when all fields are populated with valid data
 
-        @Status:ToBeAutomated
-        @Priority:Medium
-
         Given user navigates by clicking https://litecart.stqa.ru/en/
         When user enter 'test@test.com' into 'email' field
         And user enter '123456' into 'Password' field
@@ -72,10 +67,8 @@ Feature: TC
         Then redirecting to the Home page with message "You are now logged in as Ivan Ivanov."
         And text is green
 
-    Scenario: 04 - Cart - Validate that USER is able to add item to the Cart
 
-        @Status:ToBeAutomated
-        @Priority:High
+    Scenario: 04 - Cart - Validate that USER is able to add item to the Cart
 
         Given user navigates by clicking https://litecart.stqa.ru/en/
         When user clicks any item
@@ -83,10 +76,8 @@ Feature: TC
         Then redirecting to the Cart page
         And item which was added is displayed
 
-    Scenario Outline: 05 - Cart - Validate that order total price increases correctly when item quantity is increased in the cart
 
-        @Status:ToBeAutomated
-        @Priority:High
+    Scenario Outline: 05 - Cart - Validate that order total price increases correctly when item quantity is increased in the cart
 
         Given user navigates by clicking https://litecart.stqa.ru/en/
         When user clicks any item
