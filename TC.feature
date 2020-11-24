@@ -41,7 +41,7 @@ Feature: TC
         And user enter '123456' into 'Confirm Password' field
         And user clicks 'Create account' button
         Then tooltip of the 'Email' field  appears with text 'Enter valid email'
-        And text is red
+        And text is red 
         Examples:
             | email                 |
             | @test.com             |
