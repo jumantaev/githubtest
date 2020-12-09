@@ -1,0 +1,19 @@
+{
+  "Name" : "Egor",
+  "Surname" : "Jumantaev",
+  "Patronymic" : "Victorovich",
+  "day" : 1,
+  "month" : "June",
+  "year of Birth" : 1993,
+  "Birthplace" : "Polotsk",
+  "Education" : [
+    {"Institution" : "Gumnasiun #2", "period" : "from 1999 to 2010"},
+    {"Institution" : "Academy of public administration", "period" : "from 2010 to 2015"},
+    {"Institution" : "Stormnet school", "period" : 2020}
+  ],
+  "Languages and levels" : [
+    {"language" : "English", "level" : "B2-B1"},
+    {"language" : "Belarusian", "level" : "Native"},
+    {"language" : "Russian", "level" : "Native"}
+  ]
+}
